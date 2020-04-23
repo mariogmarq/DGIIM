@@ -1,0 +1,34 @@
+
+Introduce lenguaje: Opening tree file ./languages/FR.tree
+Trying to read 21057 words
+OK 21057 words read
+Opening ./languages/FR.scrabble
+OK 26 Scrabble's letter read 
+
+Letras permitidas: LNORSTUIAEGDMBCPFHVJQKWXYZ
+Introduce random: 
+IILBE
+PERVL
+RCRAM
+LANEI
+DGTHM
+NASSQ
+IDATU
+EIAOI
+AFNNS
+UEEES
+HUTEA
+MWCOR
+BKNEO
+EAIOP
+SEJEX
+FGVEE
+UTDEZ
+LOUOT
+NTLRU
+ISYAR
+%%%OUTPUT
+LANGUAGE: FR ID: 66727
+BAG (0): 
+0 words found 
+

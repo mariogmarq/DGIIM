@@ -1,0 +1,33 @@
+
+Introduce lenguaje: Opening tree file ./languages/ES.tree
+Trying to read 48428 words
+OK 48428 words read
+Opening ./languages/ES.scrabble
+OK 25 Scrabble's letter read 
+
+Letras permitidas: LTNRUISOAEGDBMPCFVYHQJÑXZ
+Introduce random: 
+OALMI
+YANXQ
+SIEUG
+RATEO
+RBSAC
+AIUCI
+OOTID
+ELÑAL
+AEVAO
+USHDR
+OJUBE
+PEAFE
+CMRDE
+ESNNA
+LPOCN
+EHDOS
+TZIAE
+UORDE
+NSATG
+%%%OUTPUT
+LANGUAGE: ES ID: -1
+BAG (0): 
+0 words found 
+

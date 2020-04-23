@@ -1,0 +1,4 @@
+
+Introduce lenguaje: Opening tree file ./languages/US.tree
+*** Error opening ./languages/US.tree
+bolsa: src/language.cpp:36: void Language::setLanguage(std::__cxx11::string): Assertion `res' failed.

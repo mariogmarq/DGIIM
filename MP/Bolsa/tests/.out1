@@ -1,0 +1,34 @@
+
+Introduce lenguaje: Opening tree file ./languages/EN.tree
+Trying to read 30400 words
+OK 30400 words read
+Opening ./languages/EN.scrabble
+OK 26 Scrabble's letter read 
+
+Letras permitidas: EAIONRTLSUDGBCMPFHVWYKJXQZ
+Introduce random: 
+IPFQE
+RNDAI
+OUATA
+EEAIF
+IESEN
+WKGEU
+LENGV
+EMWAT
+DERRA
+ESOVU
+CJXTI
+AYGSA
+NBNPL
+MOIOS
+TOBIU
+TCYOR
+TDHZL
+IEIHO
+RRAED
+LON ***
+%%%OUTPUT
+LANGUAGE: EN ID: 8784
+BAG (0): 
+1 words found 
+LON - 

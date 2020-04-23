@@ -1,0 +1,22 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Bag::define",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBag.html#ad380d36f2628b3ffe0ca19cfe53d7c19",tooltip="Define the content of the bag of letters according to the rules of the language. See language..."];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="shuffleVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bag_8cpp.html#a93c24c436157bf4f753bd36d1e1d2e4a",tooltip="Randomly reorders a vector of char. "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Bag::size",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBag.html#a32652be363a0f5d189b029ed863e5bf2",tooltip="Size of the letters set that remain in the bag. "];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Bag::extract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBag.html#ac75abe2b7626e50109a1add3382978af",tooltip="Extracts the first n letters remaining in the bag. If the bag contains less than the required n lette..."];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="removeVector",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bag_8cpp.html#a8ccee2a743b58f469047c4b4406a71e2",tooltip="Removes a position from a vector and compacts the remaining positions, thus reducing its size..."];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="HallOfFame",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#a9d58432a8bbfe62b72ad16a9b0b7c4cd",tooltip="Shows final data in a form detectable by autovalidation scripts. "];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Bag::to_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBag.html#ac63bdc8c3ceed6d86db66b9d399764ab",tooltip="Returns the set of letters that remain in the bag. "];
+}

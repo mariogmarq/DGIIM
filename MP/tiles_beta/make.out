@@ -1,0 +1,26 @@
+"make" -f nbproject/Makefile-Debug.mk QMAKE= SUBPROJECTS= .build-conf
+make[1]: se entra en el directorio '/home/mario/Documentos/MP/NetBeans/tiles'
+"make"  -f nbproject/Makefile-Debug.mk dist/Debug/GNU-Linux/tiles
+make[2]: se entra en el directorio '/home/mario/Documentos/MP/NetBeans/tiles'
+mkdir -p build/Debug/GNU-Linux/src
+rm -f "build/Debug/GNU-Linux/src/bag.o.d"
+g++    -c -g -Iinclude -I../local/18/include -std=c++14 -MMD -MP -MF "build/Debug/GNU-Linux/src/bag.o.d" -o build/Debug/GNU-Linux/src/bag.o src/bag.cpp
+mkdir -p build/Debug/GNU-Linux/src
+rm -f "build/Debug/GNU-Linux/src/main.o.d"
+g++    -c -g -Iinclude -I../local/18/include -std=c++14 -MMD -MP -MF "build/Debug/GNU-Linux/src/main.o.d" -o build/Debug/GNU-Linux/src/main.o src/main.cpp
+mkdir -p build/Debug/GNU-Linux/src
+rm -f "build/Debug/GNU-Linux/src/move.o.d"
+g++    -c -g -Iinclude -I../local/18/include -std=c++14 -MMD -MP -MF "build/Debug/GNU-Linux/src/move.o.d" -o build/Debug/GNU-Linux/src/move.o src/move.cpp
+mkdir -p build/Debug/GNU-Linux/src
+rm -f "build/Debug/GNU-Linux/src/movelist.o.d"
+g++    -c -g -Iinclude -I../local/18/include -std=c++14 -MMD -MP -MF "build/Debug/GNU-Linux/src/movelist.o.d" -o build/Debug/GNU-Linux/src/movelist.o src/movelist.cpp
+mkdir -p build/Debug/GNU-Linux/src
+rm -f "build/Debug/GNU-Linux/src/player.o.d"
+g++    -c -g -Iinclude -I../local/18/include -std=c++14 -MMD -MP -MF "build/Debug/GNU-Linux/src/player.o.d" -o build/Debug/GNU-Linux/src/player.o src/player.cpp
+mkdir -p build/Debug/GNU-Linux/src
+rm -f "build/Debug/GNU-Linux/src/tiles.o.d"
+g++    -c -g -Iinclude -I../local/18/include -std=c++14 -MMD -MP -MF "build/Debug/GNU-Linux/src/tiles.o.d" -o build/Debug/GNU-Linux/src/tiles.o src/tiles.cpp
+mkdir -p dist/Debug/GNU-Linux
+g++     -o dist/Debug/GNU-Linux/tiles build/Debug/GNU-Linux/src/bag.o build/Debug/GNU-Linux/src/main.o build/Debug/GNU-Linux/src/move.o build/Debug/GNU-Linux/src/movelist.o build/Debug/GNU-Linux/src/player.o build/Debug/GNU-Linux/src/tiles.o -L../local/18/lib ../local/18/lib/libansiterminal.a ../local/18/lib/liblanguage.a ../local/18/lib/libwordlist.a
+make[2]: se sale del directorio '/home/mario/Documentos/MP/NetBeans/tiles'
+make[1]: se sale del directorio '/home/mario/Documentos/MP/NetBeans/tiles'
