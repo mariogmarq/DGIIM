@@ -63,7 +63,7 @@ int main() {
     Leer("fichero", array1, tam1, array2, tam2);
 
     for(int i = 0; i < tam1; i++){
-        if(!contenidoen(array1[i], array2, tam2))
+        if(contenidoen(array1[i], array2, tam2))
             aumentar(array3, tam3, array1[i]);
     }
     for(int i = 0; i < tam3; i++){
