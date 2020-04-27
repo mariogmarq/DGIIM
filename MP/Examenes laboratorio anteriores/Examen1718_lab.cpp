@@ -11,12 +11,19 @@ bool contenidoen(string s, string* c, int tam){
     return false;
 }
 
+void LiberarMemoria(string* &arr1, string* &arr2) {
+    if(arr1!=nullptr)
+        delete [] arra1;
+     if(arr!=nullptr)
+        delete [] arr2;
+}
+
 void Errorbreak(string error) {
     cerr << error;
     exit(1);
 }
 
-void Leer(string ifilename, string* &array1, int &tam1, string* &array, int &tam2){
+void Leer(string ifilename, string* &array1, int &tam1, string* &array2, int &tam2){
     ifstream file;
     file.open(ifilename);
     if(!file)
@@ -26,8 +33,10 @@ void Leer(string ifilename, string* &array1, int &tam1, string* &array, int &tam
         Errorbreak("Error al leer");
     array1 = new string[tam1];
     for(int i = 0; i < tam1; i++){
-        if(!file)
+        if(!file){
             Errorbreak("Error al leer");
+            LiberarMemoria(array1, array2);
+        }
         else{
             file >> array1[i];
         }
@@ -37,8 +46,10 @@ void Leer(string ifilename, string* &array1, int &tam1, string* &array, int &tam
         Errorbreak("Error al leer");
     array2 = new string[tam2];
     for(int i = 0; i < tam2; i++){
-        if(!file)
+        if(!file){
             Errorbreak("Error al leer");
+            LiberarMemoria(array1, array2);
+        }
         else{
             file >> array2[i];
         }
