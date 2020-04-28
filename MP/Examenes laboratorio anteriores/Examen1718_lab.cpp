@@ -34,8 +34,8 @@ void Leer(string ifilename, string* &array1, int &tam1, string* &array2, int &ta
     array1 = new string[tam1];
     for(int i = 0; i < tam1; i++){
         if(!file){
-            Errorbreak("Error al leer");
             LiberarMemoria(array1, array2);
+            Errorbreak("Error al leer");
         }
         else{
             file >> array1[i];
@@ -47,8 +47,8 @@ void Leer(string ifilename, string* &array1, int &tam1, string* &array2, int &ta
     array2 = new string[tam2];
     for(int i = 0; i < tam2; i++){
         if(!file){
-            Errorbreak("Error al leer");
             LiberarMemoria(array1, array2);
+            Errorbreak("Error al leer");
         }
         else{
             file >> array2[i];
