@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PRACTICA1: Fichero Fuente src/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PRACTICA1
+   &#160;<span id="projectnumber">0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bag_8h.html">bag.h</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;language.h&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;#include <span class="stringliteral">&quot;language.h&quot;</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#a9d58432a8bbfe62b72ad16a9b0b7c4cd">HallOfFame</a>(<span class="keyword">const</span> Language &amp;l, <span class="keywordtype">int</span> random, <span class="keyword">const</span> <a class="code" href="classBag.html">Bag</a> &amp;b,</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> nwords, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;result);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   31</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    Language language;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classBag.html">Bag</a> bag;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">string</span> word, lang, result=<span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> random, count = 0;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    cout &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;Introduce lenguaje: &quot;</span>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    cin &gt;&gt; lang;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    language.setLanguage(lang);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    bag.<a class="code" href="classBag.html#ad380d36f2628b3ffe0ca19cfe53d7c19">define</a>(language);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    cout &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;Letras permitidas: &quot;</span> &lt;&lt; language.getLetterSet() &lt;&lt; endl;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Introduce random: &quot;</span>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    cin &gt;&gt; random;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    bag.setRandom(random);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">while</span>(bag.<a class="code" href="classBag.html#a32652be363a0f5d189b029ed863e5bf2">size</a>() != 0){</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        word = bag.<a class="code" href="classBag.html#ac75abe2b7626e50109a1add3382978af">extract</a>(5);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        cout &lt;&lt; endl &lt;&lt; word;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">if</span>(language.query(word)){</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            count++;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            result = result + word + <span class="stringliteral">&quot; - &quot;</span>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; ***&quot;</span>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="main_8cpp.html#a9d58432a8bbfe62b72ad16a9b0b7c4cd">HallOfFame</a>(language,random, bag,count,result);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="main_8cpp.html#a9d58432a8bbfe62b72ad16a9b0b7c4cd">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="main_8cpp.html#a9d58432a8bbfe62b72ad16a9b0b7c4cd">HallOfFame</a>(<span class="keyword">const</span> Language &amp;l, <span class="keywordtype">int</span> random, <span class="keyword">const</span> <a class="code" href="classBag.html">Bag</a> &amp;b,  </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">int</span> nwords, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;result) {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    cout &lt;&lt; endl &lt;&lt;<span class="stringliteral">&quot;%%%OUTPUT&quot;</span> &lt;&lt; endl &lt;&lt; <span class="stringliteral">&quot;LANGUAGE: &quot;</span>&lt;&lt;l.getLanguage()&lt;&lt; <span class="stringliteral">&quot; ID: &quot;</span> &lt;&lt; random &lt;&lt; endl;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;BAG (&quot;</span>&lt;&lt;b.<a class="code" href="classBag.html#a32652be363a0f5d189b029ed863e5bf2">size</a>()&lt;&lt;<span class="stringliteral">&quot;): &quot;</span> &lt;&lt; toUTF(b.<a class="code" href="classBag.html#ac63bdc8c3ceed6d86db66b9d399764ab">to_string</a>()) &lt;&lt; endl;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    cout &lt;&lt; nwords &lt;&lt; <span class="stringliteral">&quot; words found &quot;</span>&lt;&lt;endl &lt;&lt; </div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            toUTF(result) &lt;&lt; endl;    </div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="ttc" id="classBag_html_ac75abe2b7626e50109a1add3382978af"><div class="ttname"><a href="classBag.html#ac75abe2b7626e50109a1add3382978af">Bag::extract</a></div><div class="ttdeci">std::string extract(int n)</div><div class="ttdoc">Extracts the first n letters remaining in the bag. If the bag contains less than the required n lette...</div><div class="ttdef"><b>Definition:</b> <a href="bag_8cpp_source.html#l00118">bag.cpp:118</a></div></div>
+<div class="ttc" id="classBag_html_a32652be363a0f5d189b029ed863e5bf2"><div class="ttname"><a href="classBag.html#a32652be363a0f5d189b029ed863e5bf2">Bag::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Size of the letters set that remain in the bag. </div><div class="ttdef"><b>Definition:</b> <a href="bag_8cpp_source.html#l00100">bag.cpp:100</a></div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="classBag_html_ac63bdc8c3ceed6d86db66b9d399764ab"><div class="ttname"><a href="classBag.html#ac63bdc8c3ceed6d86db66b9d399764ab">Bag::to_string</a></div><div class="ttdeci">std::string to_string() const</div><div class="ttdoc">Returns the set of letters that remain in the bag. </div><div class="ttdef"><b>Definition:</b> <a href="bag_8cpp_source.html#l00104">bag.cpp:104</a></div></div>
+<div class="ttc" id="classBag_html_ad380d36f2628b3ffe0ca19cfe53d7c19"><div class="ttname"><a href="classBag.html#ad380d36f2628b3ffe0ca19cfe53d7c19">Bag::define</a></div><div class="ttdeci">void define(const Language &amp;l)</div><div class="ttdoc">Define the content of the bag of letters according to the rules of the language. See language...</div><div class="ttdef"><b>Definition:</b> <a href="bag_8cpp_source.html#l00077">bag.cpp:77</a></div></div>
+<div class="ttc" id="main_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function. </div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00031">main.cpp:31</a></div></div>
+<div class="ttc" id="classBag_html"><div class="ttname"><a href="classBag.html">Bag</a></div><div class="ttdoc">Class to represent the full set of letters of the Scrabble. The number of letters, their score and their frequencies is determined by the rules of the game. </div><div class="ttdef"><b>Definition:</b> <a href="bag_8h_source.html#l00026">bag.h:26</a></div></div>
+<div class="ttc" id="main_8cpp_html_a9d58432a8bbfe62b72ad16a9b0b7c4cd"><div class="ttname"><a href="main_8cpp.html#a9d58432a8bbfe62b72ad16a9b0b7c4cd">HallOfFame</a></div><div class="ttdeci">void HallOfFame(const Language &amp;l, int random, const Bag &amp;b, int nwords, const string &amp;result)</div><div class="ttdoc">Shows final data in a form detectable by autovalidation scripts. </div><div class="ttdef"><b>Definition:</b> <a href="main_8cpp_source.html#l00067">main.cpp:67</a></div></div>
+<div class="ttc" id="bag_8h_html"><div class="ttname"><a href="bag_8h.html">bag.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
