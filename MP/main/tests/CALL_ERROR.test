@@ -1,0 +1,5 @@
+%%%CALL -r 100 -i data/ES_100_ERROR.data
+%%%OUTPUT
+Error in call. Please use either:
+-l <language> -w <width> -h <height> [-r <randomnumber> -save <matchfile>]
+-open <matchfile> [-save <matchfile>]

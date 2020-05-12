@@ -114,7 +114,6 @@ int main(int nargs, char * args[]) {
         errorBreak(ERROR_ARGUMENTS, "");
     
     
-    
     //if(!continuarPartida)
     if(!continuarPartida){
         language.setLanguage(lang);
@@ -126,12 +125,12 @@ int main(int nargs, char * args[]) {
     }
     else {
         inMatchfile >> aux1;
+        if(aux1!=PASSWORD)
+            errorBreak(ERROR_DATA, "");
         inMatchfile >> score;
         inMatchfile >> lang;
-        inMatchfile >> height >> width;
         if(inMatchfile.eof())
             errorBreak(ERROR_DATA,"");
-        tiles.setSize(height, width);
         inMatchfile >> tiles;
         inMatchfile >> relleno >> aux1;
         if(inMatchfile.eof())
@@ -169,7 +168,7 @@ int main(int nargs, char * args[]) {
         *os << PASSWORD << endl;
     *os << score << endl << lang << endl;
     tiles.print(*os);
-    *os << endl << player.size() << " " << toUTF(player.to_string()) << endl;
+    *os << player.size() << " " << toUTF(player.to_string()) << endl;
     *os << bag.size() << " " << toUTF(bag.to_string()) << endl;
     
     

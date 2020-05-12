@@ -75,15 +75,15 @@ Tiles& Tiles::operator =(const Tiles& orig){
 }
 
 char Tiles::get(int r, int c) const{
-    assert(r >= 1 && r < getHeight()+1);
-    assert(c >= 1 && c < getWidth()+1);
-    return cell[r-1][c-1];
+    assert(r >= 0 && r < getHeight());
+    assert(c >= 0 && c < getWidth());
+    return cell[r][c];
 }
 
 void Tiles::set(int r, int c, char l){
-    assert(r >= 1 && r < getHeight()+1);
-    assert(c >= 1 && c < getWidth()+1);
-    cell[r-1][c-1]=l;
+    assert(r >= 0 && r < getHeight());
+    assert(c >= 0 && c < getWidth());
+    cell[r][c]=l;
 }
 
 void Tiles::add(const Move& m){
@@ -91,14 +91,14 @@ void Tiles::add(const Move& m){
         for(int i = 0; i<m.getLetters().size(); i++){
             if(m.getRow() >= 1 && m.getRow() < getHeight()+1)
                 if(m.getCol()+i >= 1 && m.getCol()+i < getWidth()+1)
-                set(m.getRow(), m.getCol()+i, m.getLetters()[i]);
+                set(m.getRow()-1, m.getCol()+i-1, m.getLetters()[i]);
         }
     }
     if(!m.isHorizontal()){
         for(int i = 0; i<m.getLetters().size(); i++){
             if(m.getRow()+i >= 1 && m.getRow()+i < getHeight()+1)
                 if(m.getCol() >= 1 && m.getCol() < getWidth()+1)
-                    set(m.getRow()+i, m.getCol(), m.getLetters()[i]);
+                    set(m.getRow()+i-1, m.getCol()-1, m.getLetters()[i]);
         }
     }
 }
@@ -112,9 +112,9 @@ void Tiles::copy(const Tiles& t){
     for(int i = 0; i < t.getHeight(); i++){
         temp[i] = new char[t.getWidth()];
     }
-    for(int i = 1; i <= t.getHeight(); i++){
-        for(int j = 1; j <= t.getWidth(); j++){
-            temp[i-1][j-1] = t.get(i, j);
+    for(int i = 0; i < t.getHeight(); i++){
+        for(int j = 0; j < t.getWidth(); j++){
+            temp[i][j] = t.get(i, j);
         }
     }
     deallocate();
@@ -123,20 +123,29 @@ void Tiles::copy(const Tiles& t){
 
 void Tiles::print(std::ostream & os) const{
     os << getHeight() << " " << getWidth() << std::endl;
-    for(int i = 1; i <= getHeight();i++){
-        for(int j = 1; j <= getWidth();j++){
-            os << get(i, j) << " ";
+    for(int i = 0; i < getHeight();i++){
+        for(int j = 0; j <getWidth();j++){
+            os << toUTF(get(i, j)) << " ";
         }
         os << std::endl;
     }
+    os << std::endl;
 }
 
 bool Tiles::read(std::istream& is) {
+    int r, c;
+    is >> r >> c;
+    if(is.eof())
+        return false;
+    setSize(r,c);
+    
+    string s;
     for(int i = 0; i < rows; i++){
         for(int j = 0; j < columns; j++){
-            is >> cell[i][j];
+            is >> s;
             if(is.eof())
                 return false;
+            set(i,j,toISO(s)[0]);
         }
     }
     return true;

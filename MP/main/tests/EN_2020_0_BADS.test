@@ -1,0 +1,17 @@
+%%%CALL -open data/EN_2020_0.match -save data/.out.match < data/EN_2020_0_47_BADS.data 
+%%%FROMFILE data/.out.match
+%%%OUTPUT
+MPALABRADOS-V1
+47
+EN
+7 7
+. . C . . . . 
+. B U T . . . 
+. . T A . . . 
+. S . X . . . 
+R O S I E R . 
+. A . . V . . 
+. P . M E E T 
+
+7 EIIIIOO
+70 TVDONDNRLNRZTUIRLEAIORAAGTIUEFHECAEAAMNAGDGYEHLIEJBSOWDWNQSPULEFOYEKNO

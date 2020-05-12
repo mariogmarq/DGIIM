@@ -1,0 +1,15 @@
+%%%CALL  -w 7 -l en -r 2020 -h 7 < data/empty.data 
+%%%OUTPUT
+0
+EN
+7 7
+. . . . . . . 
+. . . . . . . 
+. . . . . . . 
+. . . . . . . 
+. . . . . . . 
+. . . . . . . 
+. . . . . . . 
+
+7 ABRRTUX
+91 ISIIEOCEVTTEPMOEASIIOTVDONDNRLNRZTUIRLEAIORAAGTIUEFHECAEAAMNAGDGYEHLIEJBSOWDWNQSPULEFOYEKNO

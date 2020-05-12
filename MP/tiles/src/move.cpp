@@ -35,9 +35,9 @@ void Move::setCol(int c){
 }
 
 void Move::setHorizontal(char h){
-    if(h == 'H')
+    if(h == 'H' || h == 'h')
         ishorizontal = true;
-    else if(h == 'V')
+    else if(h == 'V' || h == 'v')
         ishorizontal = false;
 }
 

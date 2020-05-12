@@ -1,0 +1,25 @@
+%%%CALL -open data/ES_100_156.match -save tests/.out.match < data/ES_100_156_222.data
+%%%FROMFILE tests/.out.match
+%%%OUTPUT
+MPALABRADOS-V1
+222
+ES
+15 15
+. . . . . . . . . . S E R I O 
+. . . . . . . . A D O R A D . 
+. . . . . . M I M O . . J . . 
+. . . . . T O R O . D I A Z . 
+. . . . P O D E R . . . . . . 
+. . . P I S A . . . . . . . . 
+. . . . A . S U B E . . . . . 
+. . . U N . . . U . . S . . . 
+. . . . . . . L E C H E . . . 
+. . . . . C A E N . . X . L . 
+. . . . F . S E A . . O Y E N 
+. . . . L . T . . . . . . N . 
+. . . . A Ñ A D E . . . . T . 
+. . . . C . . . . . . . . E . 
+. . . C A O B A . . . . . . . 
+
+7 AIQSUUV
+11 GHTGRELOENI

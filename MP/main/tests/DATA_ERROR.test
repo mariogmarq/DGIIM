@@ -1,0 +1,4 @@
+
+%%%CALL  -open data/EN_2020_0_DATAERROR.match
+%%%OUTPUT
+Data error in file data/EN_2020_0_DATAERROR.match
