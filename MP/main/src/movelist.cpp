@@ -32,39 +32,48 @@ void Movelist::allocate(int n){
         deallocate();
     moves = new Move[n];
 }
+
 void Movelist::deallocate(){
     if(moves != nullptr){
         delete[] moves;
     }
     moves = nullptr;
-    
 }
+
 Movelist::Movelist(){
     moves = nullptr;
     nMove = 0;
 }
+
 Movelist::Movelist(int nmov){
     moves = nullptr;
     allocate(nmov);
     nMove = nmov;
 }
+
 Movelist::Movelist(const Movelist& orig) {
     moves = nullptr;
     nMove = 0;
     copy(orig);
 }
+
 Movelist::~Movelist(){
     deallocate();
 }
+
 Move Movelist::get(int p) const{
     assert(p >=0 && p < size());
     return moves[p];
 }
+
 void Movelist::set(int p, const Move& m){
     assert(p >=0 && p < size());
     moves[p]=m;
 }
+
 int Movelist::find(const Move& mov) const{
+    
+    //Looks in the whole list for a movement with 4 values equal
     for(int i = 0; i < size(); i++){
         if(get(i).getCol()==mov.getCol() && get(i).getRow()==mov.getRow()){
             if(get(i).getLetters()==mov.getLetters() && get(i).isHorizontal()==mov.isHorizontal()){
@@ -72,25 +81,32 @@ int Movelist::find(const Move& mov) const{
             }
         }
     }
+    
     return -1;
 }
+
 void Movelist::copy(const Movelist& ml){
-    if(moves != nullptr)
-        deallocate();
-    nMove = ml.size();
-    allocate(nMove);
+    //See if we can just reuse space
+    if(size() != ml.size()){
+        if(moves != nullptr)
+            deallocate();
+        nMove = ml.size();
+        allocate(nMove);
+    }
+    
     for(int i = 0; i < nMove; i++)
         set(i, ml.get(i));
 }
+
 void Movelist::add(const Move& mov){
-    nMove++;
-    Move *temp = new Move[nMove];
+    Move *temp = new Move[++nMove];
     for(int i = 0; i < size()-1;i++)
-    temp[i] = get(i);
+        temp[i] = get(i);
     temp[nMove-1]=mov;
     deallocate();
     moves = temp;
 }
+
 void Movelist::remove(int p){
     assert(p>=0 && p<size());
     Move *temp = new Move[--nMove];
@@ -101,11 +117,13 @@ void Movelist::remove(int p){
     deallocate();
     moves = temp;
 }
+
 void Movelist::remove(const Move& mov){
     int pos=find(mov);
     if(pos!=-1)
         remove(pos);
 }
+
 void Movelist::zip(const Language& l){
     int i = 0;
     while(i < size()){
@@ -117,6 +135,7 @@ void Movelist::zip(const Language& l){
         }
     }
 }
+
 int Movelist::getScore() const{
     int suma = 0;
     int score = 0;
@@ -129,14 +148,16 @@ int Movelist::getScore() const{
     }
     return suma;
 }
+
 void Movelist::clear(){
     deallocate();
-    moves = nullptr;
     nMove = 0;
 }
+
 Movelist Movelist::operator =(const Movelist& orig){
     if(this != &orig)
         copy(orig);
+    
     return *this;
 }
 
@@ -146,22 +167,13 @@ bool Movelist::read(std::istream& is){
     char h='h';
     int col = 0, row = 0;
     do{
+        is >> mov;
+        if(mov.getLetters() != "@")
+            add(mov);
         if(is.eof() || !is)
             return false;
-        try{
-            is >> h;
-            is >> row;
-            is >> col;
-            is >> l;
-            if(l!="@"){
-                mov.set(row, col, h, l);
-                add(mov);
-            }
-        }
-        catch(...){
-            return false;
-        }
-    }while(l!="@");
+    }while(mov.getLetters() != "@");
+    
     return true;
 }
 

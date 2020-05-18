@@ -71,10 +71,6 @@ void Bag::set(int p, char c) {
     letters[p] = c;
 }
 
-void Bag::setRandom(int p){
-    id = p;
-}
-
 void Bag::define(const Language &l) {
 //    nletters=0;
 //    string letters = l.getLetterSet();
@@ -122,13 +118,13 @@ void Bag::set(string s) {
 }
 
 string Bag::extract(int n){
-    int number_to_extract = n;
+    int toExtract = n;
     string str = "";
     if(n > nletters)
-        number_to_extract = nletters;
-    for(int i = 0; i < number_to_extract; i++)
+        toExtract = nletters;
+    for(int i = 0; i < toExtract; i++)
         str.push_back(get(i));
-    for(int i = 0; i < number_to_extract; i++)
+    for(int i = 0; i < toExtract; i++)
         removeVector(letters, nletters, 0);
     return str;
 }

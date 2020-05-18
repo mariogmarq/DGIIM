@@ -17,21 +17,10 @@ Move::Move() {
 }
 
 void Move::set(int r, int c, char h, const string &l) {
-    row = r;
-    column = c;
-    if(h == 'H' || h == 'h')
-        ishorizontal = true;
-    else if(h == 'V' || h == 'v')
-        ishorizontal = false;
-    letters = l;
-}
-
-void Move::setRow(int r){
-    row = r;
-}
-
-void Move::setCol(int c){
-    column = c;
+    setRow(r);
+    setCol(c);
+    setHorizontal(h);
+    setLetters(l);
 }
 
 void Move::setHorizontal(char h){
@@ -39,10 +28,6 @@ void Move::setHorizontal(char h){
         ishorizontal = true;
     else if(h == 'V' || h == 'v')
         ishorizontal = false;
-}
-
-void Move::setLetters(const string &l) {
-    letters = l;
 }
 
 int Move::findScore(const Language &l) const {
@@ -56,10 +41,8 @@ int Move::findScore(const Language &l) const {
     return score;
 }
 
-void Move::setScore(int s){
-    score = s;
-}
-
+//Dado que los getters se usan mucho más que los setters no se van a implementar como
+//funciones inline
 int Move::getScore() const{
     return score;
 }
@@ -81,21 +64,18 @@ string Move::getLetters() const{
 }
 
 void Move::print(std::ostream &os) const{
-    if(ishorizontal)
-        os << "H ";
-    else
-        os << "V ";
+    os << ishorizontal ? "H " : "V ";
     os << row << " " << column <<  " " << letters;
 }
 
 void Move::read(std::istream& is){
     char h;
     is >> h;
-    setHorizontal(h);
     is >> row;
     is >> column;
     is >> letters;
     letters = normalizeWord(letters);
+    setHorizontal(h);
 }
 
 std::ostream& operator<<(std::ostream& os, const Move & m){

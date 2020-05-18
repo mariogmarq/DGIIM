@@ -47,12 +47,12 @@ public:
 	 * @brief Sets the main data of the class 
 	 * @param r row
 	 */
-	void setRow(int r);
+	inline void setRow(int r){row = r;};
 	/**
 	 * @brief Sets the main data of the class 
 	 * @param c Column
 	 */
-	void setCol(int c);
+	inline void setCol(int c){column = c;};
 	/**
 	 * @brief Sets the main data of the class 
 	 * @param h 'H' horizontal or 'V' vertical
@@ -62,7 +62,7 @@ public:
 	 * @brief Sets the main data of the class 
 	 * @param l Letters
 	 */
-	void setLetters(const std::string &l);
+	inline void setLetters(const std::string &l){letters = l;};
 	/**
 	 * @brief Calculates the value of the movement by adding the value 
 	 * each letter according to the chosen language. If the word contained in 
@@ -76,7 +76,7 @@ public:
 	 * @brief Sets the value of the movement which have been calculated elsewhere 
 	 * @param s The value of the movement
 	 */
-	void setScore(int s);
+	inline void setScore(int s){score = s;};
 	/**
 	 * @brief Query data stored in the class
 	 * @return The value stored

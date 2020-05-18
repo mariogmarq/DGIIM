@@ -135,9 +135,10 @@ int main(int nargs, char * args[]) {
     while (!end)  {
         // 2) Given the inner data members, it pretty-prints the screen
         game.doPaint();
-        
+        setCursorOn();
         // 3) Reads the movement from cin
         cin >> move;
+        setCursorOff();
         word = move.getLetters();
         if (word=="_") {
             end=true;

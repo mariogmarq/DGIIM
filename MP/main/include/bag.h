@@ -50,7 +50,7 @@ public:
 	/**
 	 * 
 	 */
-	void setRandom(int p);
+	inline void setRandom(int p){id = p;};
 	/**
 	 * @brief Define the content of the bag of letters according to 
 	 * the rules of the language. See language.h for more details on how to
